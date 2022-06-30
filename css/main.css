@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @font-face {
     font-family: "Inter";
     font-weight: 400;
@@ -22,7 +29,8 @@
 }
 
 *{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body{
@@ -31,9 +39,14 @@ body{
 }
 
 .form{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     height: 100vh;
 }
 
@@ -120,7 +133,29 @@ body{
     outline: none;
     border-bottom: 1px solid #555555;
     font-size: 18px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
+}
+
+.form-input::-webkit-input-placeholder{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.form-input::-moz-placeholder{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.form-input:-ms-input-placeholder{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.form-input::-ms-input-placeholder{
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .form-input::placeholder{
@@ -135,6 +170,8 @@ body{
 .form-input:focus{
     border-bottom: 1px solid blue;
     border-radius: 0px 0px 10px 10px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -145,11 +182,15 @@ body{
     border-radius: 10px;
     border: none;
     color: #fff;
+    -webkit-transition: 0.3;
+    -o-transition: 0.3;
     transition: 0.3;
 }
 
 .form-button:active{
     opacity: 0.8;
+    -webkit-transition: 0.3;
+    -o-transition: 0.3;
     transition: 0.3;
 }
 
