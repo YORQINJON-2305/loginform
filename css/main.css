@@ -5,6 +5,20 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @font-face {
     font-family: "Inter";
     font-weight: 400;
@@ -127,7 +141,7 @@ body {
 .form-input {
     width: 450px;
     margin-bottom: 4px;
-    padding: 5px 5px 10px 5px;
+    padding: 11px 5px 10px 5px;
     font-weight: 600;
     border: none;
     outline: none;
@@ -138,8 +152,24 @@ body {
     transition: 0.3s;
 }
 
+.form-input:not(:-moz-placeholder-shown):not(:focus):invalid{
+    border-bottom: 1px solid #F03535;
+}
+
+.form-input:not(:-ms-input-placeholder):not(:focus):invalid{
+    border-bottom: 1px solid #F03535;
+}
+
 .form-input:not(:placeholder-shown):not(:focus):invalid{
     border-bottom: 1px solid #F03535;
+}
+
+.form-input:not(:-moz-placeholder-shown):not(:focus):invalid ~ .invalid-text{
+    opacity: 1;
+}
+
+.form-input:not(:-ms-input-placeholder):not(:focus):invalid ~ .invalid-text{
+    opacity: 1;
 }
 
 .form-input:not(:placeholder-shown):not(:focus):invalid ~ .invalid-text{
